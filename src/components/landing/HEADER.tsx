@@ -63,21 +63,6 @@ export function HEADER() {
 
   return (
     <>
-      <div className="fixed right-4 top-4 z-[65] sm:right-6 lg:right-8">
-        <button
-          type="button"
-          onClick={() => {
-            setLocationOpen(true);
-            setMenuOpen(false);
-          }}
-          className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white/96 px-3 py-1.5 text-[11px] font-medium text-slate-500 shadow-[0_10px_24px_rgba(15,23,42,0.08)] backdrop-blur transition hover:text-slate-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/10 sm:text-xs"
-        >
-          <MapPin className="size-3.5 text-primary" />
-          <span>ваш город: {selectedLocation.replace("г. ", "")}</span>
-          <ChevronDown className="size-3.5 text-slate-400" />
-        </button>
-      </div>
-
       <header className="relative z-40 border-b border-white/40 bg-white/72 backdrop-blur-2xl">
         <div className="section-shell py-3 sm:py-4">
           <div className="glass-panel rounded-[28px] px-4 py-3 sm:px-5">
@@ -114,6 +99,19 @@ export function HEADER() {
                   <Tickets className="size-4 text-primary" />
                   Абонементы
                 </Link>
+
+                <button
+                  type="button"
+                  onClick={() => {
+                    setLocationOpen(true);
+                    setMenuOpen(false);
+                  }}
+                  className="inline-flex w-fit items-center gap-1.5 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-500 shadow-[var(--shadow-soft)] transition hover:text-slate-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/10"
+                >
+                  <MapPin className="size-4 text-primary" />
+                  <span>ваш город: {selectedLocation.replace("г. ", "")}</span>
+                  <ChevronDown className="size-4 text-slate-400" />
+                </button>
               </div>
 
               <div className="flex flex-wrap items-center gap-3 xl:justify-end">

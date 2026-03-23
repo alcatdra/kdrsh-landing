@@ -12,6 +12,8 @@ const heroQuestions = [
   'Хотите, чтобы спорт формировал характер, а не только мышцы?',
 ] as const;
 
+const marqueeItems = [...heroQuestions, ...heroQuestions];
+
 export function HERO() {
   const [requestOpen, setRequestOpen] = useState(false);
 
@@ -21,7 +23,7 @@ export function HERO() {
         <div className="absolute inset-0 -z-20">
           <Image
             src="/images/photo.png"
-            alt="background"
+            alt="Ребёнок на тренировке по плаванию"
             fill
             className="object-cover"
             sizes="100vw"
@@ -40,33 +42,19 @@ export function HERO() {
               transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
               className="space-y-7 text-white"
             >
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/16 bg-white/8 px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-white/84 backdrop-blur">
+                KUDRYASHOV PRO LAB
+              </span>
+
               <div className="space-y-4">
+                <h1 className="text-balance max-w-4xl text-5xl font-semibold leading-[0.92] tracking-tight sm:text-6xl lg:text-[88px]">
+                  Ваш ребёнок готов чувствовать себя уверенно в воде?
+                </h1>
                 <p className="max-w-2xl text-lg leading-8 text-white/78 sm:text-xl">
                   Безопасное обучение плаванию с системой прогресса и поддержкой
                   тренера.
                 </p>
-                <h1 className="text-balance max-w-4xl text-4xl font-semibold leading-[0.92] tracking-tight sm:text-6xl lg:text-[80px]">
-                  Ваш ребёнок готов чувствовать себя уверенно в воде?
-                </h1>
               </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.35 }}
-              transition={{
-                duration: 0.62,
-                delay: 0.08,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-              className="mt-8 max-w-2xl space-y-3 text-white/86"
-            >
-              {heroQuestions.map((question) => (
-                <p key={question} className="text-lg leading-8 sm:text-xl">
-                  {question}
-                </p>
-              ))}
             </motion.div>
 
             <motion.div
@@ -96,6 +84,40 @@ export function HERO() {
             </motion.div>
           </div>
         </div>
+      </section>
+
+      <section className="relative overflow-hidden border-y border-slate-200 bg-white">
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-[linear-gradient(90deg,#ffffff_0%,rgba(255,255,255,0)_100%)] sm:w-28" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-[linear-gradient(270deg,#ffffff_0%,rgba(255,255,255,0)_100%)] sm:w-28" />
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.6 }}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          className="py-5 sm:py-6"
+        >
+          <motion.div
+            animate={{ x: ['0%', '-50%'] }}
+            transition={{
+              duration: 28,
+              repeat: Infinity,
+              ease: 'linear',
+            }}
+            className="flex w-max items-center"
+          >
+            {marqueeItems.map((question, index) => (
+              <div
+                key={`${question}-${index}`}
+                className="flex items-center gap-4 px-5 sm:px-7"
+              >
+                <span className="font-heading text-lg font-medium tracking-[-0.04em] text-slate-900 sm:text-2xl">
+                  {question}
+                </span>
+                <span className="size-2 rounded-full bg-primary/70" />
+              </div>
+            ))}
+          </motion.div>
+        </motion.div>
       </section>
 
       <AnimatePresence>
