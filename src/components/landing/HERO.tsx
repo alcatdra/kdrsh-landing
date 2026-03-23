@@ -47,7 +47,7 @@ export function HERO() {
               </span>
 
               <div className="space-y-4">
-                <h1 className="text-balance max-w-4xl text-5xl font-semibold leading-[0.92] tracking-tight sm:text-6xl lg:text-[88px]">
+                <h1 className="text-balance max-w-4xl text-4xl font-semibold leading-[0.92] tracking-tight sm:text-6xl lg:text-[88px]">
                   Ваш ребёнок готов чувствовать себя уверенно в воде?
                 </h1>
                 <p className="max-w-2xl text-lg leading-8 text-white/78 sm:text-xl">
@@ -76,11 +76,6 @@ export function HERO() {
                 Оставить заявку
                 <ArrowRight className="ml-2 size-4" />
               </button>
-
-              <div className="inline-flex items-center gap-3 rounded-full border border-white/14 bg-white/8 px-5 py-3 text-sm font-medium text-white/84 backdrop-blur">
-                <ShieldCheck className="size-4 text-cyan-200" />
-                Мягкая адаптация с первой тренировки
-              </div>
             </motion.div>
           </div>
         </div>

@@ -1,37 +1,25 @@
-"use client";
+'use client';
 
-import type { ReactNode } from "react";
+import type { ReactNode } from 'react';
 
-import Image from "next/image";
-import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import Image from 'next/image';
+import Link from 'next/link';
+import { useEffect, useRef, useState } from 'react';
 
-import { AnimatePresence, motion } from "framer-motion";
-import {
-  ChevronDown,
-  LogIn,
-  MapPin,
-  Menu,
-  Tickets,
-  X,
-} from "lucide-react";
+import { AnimatePresence, motion } from 'framer-motion';
+import { ChevronDown, LogIn, MapPin, Menu, Tickets, X } from 'lucide-react';
 
-const locations = [
-  "г. Новокузнецк",
-  "г. Кемерово",
-  "г. Новосибирск",
-] as const;
+const locations = ['г. Новокузнецк', 'г. Кемерово', 'г. Новосибирск'] as const;
 
 const menuItems = [
-  { label: "Тренеры", href: "#trainers" },
-  { label: "Чемпионаты", href: "#championships" },
-  { label: "Лагерь", href: "#camp" },
+  { label: 'Тренеры', href: '#trainers' },
+  { label: 'Чемпионаты', href: '#championships' },
+  { label: 'Лагерь', href: '#camp' },
 ] as const;
 
 export function HEADER() {
-  const [selectedLocation, setSelectedLocation] = useState<
-    (typeof locations)[number]
-  >("г. Новокузнецк");
+  const [selectedLocation, setSelectedLocation] =
+    useState<(typeof locations)[number]>('г. Новокузнецк');
   const [menuOpen, setMenuOpen] = useState(false);
   const [locationOpen, setLocationOpen] = useState(false);
   const [trialOpen, setTrialOpen] = useState(false);
@@ -39,7 +27,7 @@ export function HEADER() {
 
   useEffect(() => {
     const handleEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
+      if (event.key === 'Escape') {
         setMenuOpen(false);
         setLocationOpen(false);
         setTrialOpen(false);
@@ -52,12 +40,12 @@ export function HEADER() {
       }
     };
 
-    window.addEventListener("keydown", handleEscape);
-    document.addEventListener("mousedown", handlePointerDown);
+    window.addEventListener('keydown', handleEscape);
+    document.addEventListener('mousedown', handlePointerDown);
 
     return () => {
-      window.removeEventListener("keydown", handleEscape);
-      document.removeEventListener("mousedown", handlePointerDown);
+      window.removeEventListener('keydown', handleEscape);
+      document.removeEventListener('mousedown', handlePointerDown);
     };
   }, []);
 
@@ -109,7 +97,7 @@ export function HEADER() {
                   className="inline-flex w-fit items-center gap-1.5 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-500 shadow-[var(--shadow-soft)] transition hover:text-slate-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/10"
                 >
                   <MapPin className="size-4 text-primary" />
-                  <span>ваш город: {selectedLocation.replace("г. ", "")}</span>
+                  <span>ваш город: {selectedLocation.replace('г. ', '')}</span>
                   <ChevronDown className="size-4 text-slate-400" />
                 </button>
               </div>
@@ -155,7 +143,7 @@ export function HEADER() {
                         initial={{ opacity: 0, y: 12, scale: 0.98 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 10, scale: 0.98 }}
-                        transition={{ duration: 0.18, ease: "easeOut" }}
+                        transition={{ duration: 0.18, ease: 'easeOut' }}
                         className="absolute right-0 top-[calc(100%+0.75rem)] w-64 rounded-[24px] border border-slate-200 bg-white p-3 shadow-[0_18px_36px_rgba(15,23,42,0.12)]"
                       >
                         <div className="mb-2 px-3 pt-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
@@ -202,8 +190,8 @@ export function HEADER() {
                     }}
                     className={`flex items-center justify-between rounded-[20px] border px-4 py-4 text-left transition ${
                       active
-                        ? "border-primary/20 bg-sky-50 text-slate-950"
-                        : "border-slate-200 bg-white text-slate-600 hover:border-primary/20 hover:bg-slate-50"
+                        ? 'border-primary/20 bg-sky-50 text-slate-950'
+                        : 'border-slate-200 bg-white text-slate-600 hover:border-primary/20 hover:bg-slate-50'
                     }`}
                   >
                     <span className="font-medium">{location}</span>
@@ -228,7 +216,7 @@ export function HEADER() {
             onClose={() => setTrialOpen(false)}
           >
             <div className="grid gap-3">
-              {["Имя родителя", "Телефон", "Возраст ребёнка"].map((field) => (
+              {['Имя родителя', 'Телефон', 'Возраст ребёнка'].map((field) => (
                 <div
                   key={field}
                   className="rounded-[18px] border border-slate-200 bg-slate-50 px-4 py-4 text-sm text-slate-500"
@@ -284,7 +272,7 @@ function HeaderModal({
         initial={{ opacity: 0, y: 18, scale: 0.98 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         exit={{ opacity: 0, y: 14, scale: 0.98 }}
-        transition={{ duration: 0.2, ease: "easeOut" }}
+        transition={{ duration: 0.2, ease: 'easeOut' }}
         onClick={(event) => event.stopPropagation()}
         className="surface-card w-full max-w-lg rounded-[32px] p-6 sm:p-7"
       >
