@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Manrope, Sora } from "next/font/google";
+
 import "./globals.css";
 
 const manrope = Manrope({
@@ -13,9 +14,9 @@ const sora = Sora({
 });
 
 export const metadata: Metadata = {
-  title: "Школа плавания для детей | Безопасное обучение с понятным сервисом",
+  title: "KUDRYASHOV PRO LAB | Школа плавания",
   description:
-    "Современный лендинг детской школы плавания на Next.js: мягкая адаптация, безопасность, прозрачный прогресс и премиальный сервис для родителей.",
+    "Безопасное обучение плаванию для детей с современной системой сервиса, поддержкой тренера и понятным прогрессом для родителей.",
 };
 
 export default function RootLayout({
