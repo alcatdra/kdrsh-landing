@@ -63,45 +63,45 @@ export function HEADER() {
 
   return (
     <>
-      <header className="relative z-40 border-b border-white/50 bg-white/70 backdrop-blur-2xl">
-        <div className="absolute right-4 top-3 z-10 sm:right-6 lg:right-8">
-          <button
-            type="button"
-            onClick={() => {
-              setLocationOpen(true);
-              setMenuOpen(false);
-            }}
-            className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white/82 px-3 py-1.5 text-[11px] font-medium text-slate-500 shadow-[var(--shadow-soft)] transition hover:text-slate-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/10 sm:text-xs"
-          >
-            <MapPin className="size-3.5 text-primary" />
-            <span>ваш город: {selectedLocation.replace("г. ", "")}</span>
-            <ChevronDown className="size-3.5 text-slate-400" />
-          </button>
-        </div>
+      <div className="fixed right-4 top-4 z-[65] sm:right-6 lg:right-8">
+        <button
+          type="button"
+          onClick={() => {
+            setLocationOpen(true);
+            setMenuOpen(false);
+          }}
+          className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white/96 px-3 py-1.5 text-[11px] font-medium text-slate-500 shadow-[0_10px_24px_rgba(15,23,42,0.08)] backdrop-blur transition hover:text-slate-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/10 sm:text-xs"
+        >
+          <MapPin className="size-3.5 text-primary" />
+          <span>ваш город: {selectedLocation.replace("г. ", "")}</span>
+          <ChevronDown className="size-3.5 text-slate-400" />
+        </button>
+      </div>
 
-        <div className="section-shell py-4 pt-12 sm:py-5 sm:pt-14">
-          <div className="glass-panel rounded-[32px] px-4 py-4 sm:px-6">
-            <div className="flex flex-col gap-5 xl:flex-row xl:items-center xl:justify-between">
-              <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:gap-8">
+      <header className="relative z-40 border-b border-white/40 bg-white/72 backdrop-blur-2xl">
+        <div className="section-shell py-3 sm:py-4">
+          <div className="glass-panel rounded-[28px] px-4 py-3 sm:px-5">
+            <div className="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
+              <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:gap-7">
                 <Link
                   href="/"
-                  className="flex items-center gap-4 rounded-[24px] transition hover:opacity-90 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/10"
+                  className="flex items-center gap-3 rounded-[22px] transition hover:opacity-90 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/10"
                 >
-                  <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-[20px] bg-white shadow-[var(--shadow-card)] sm:h-16 sm:w-16">
+                  <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-[18px] bg-white shadow-[var(--shadow-card)] sm:h-14 sm:w-14">
                     <Image
                       src="/logo.png"
                       alt="KUDRYASHOV PRO LAB"
                       fill
                       className="object-contain p-2"
-                      sizes="64px"
+                      sizes="56px"
                       priority
                     />
                   </div>
                   <div className="space-y-1">
-                    <p className="font-heading text-base font-semibold uppercase tracking-[0.12em] text-slate-950 sm:text-lg">
+                    <p className="font-heading text-[1.05rem] font-semibold uppercase leading-tight tracking-[-0.05em] text-slate-950 sm:text-[1.35rem]">
                       KUDRYASHOV PRO LAB
                     </p>
-                    <p className="text-sm font-medium text-slate-500">
+                    <p className="font-heading text-[0.74rem] font-medium uppercase leading-tight tracking-[-0.04em] text-slate-500 sm:text-[0.86rem]">
                       школа плавания
                     </p>
                   </div>
@@ -109,7 +109,7 @@ export function HEADER() {
 
                 <Link
                   href="/abonements"
-                  className="inline-flex w-fit items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 shadow-[var(--shadow-soft)] transition hover:border-primary/25 hover:text-slate-950 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/10"
+                  className="inline-flex w-fit items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 shadow-[var(--shadow-soft)] transition hover:border-primary/25 hover:text-slate-950 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/10"
                 >
                   <Tickets className="size-4 text-primary" />
                   Абонементы
@@ -123,7 +123,7 @@ export function HEADER() {
                     setTrialOpen(true);
                     setMenuOpen(false);
                   }}
-                  className="cta-gradient inline-flex items-center justify-center rounded-full px-6 py-3.5 text-base font-semibold text-white shadow-[var(--shadow-card)] transition hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-orange-200"
+                  className="cta-gradient inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-semibold text-white shadow-[var(--shadow-card)] transition hover:-translate-y-0.5 hover:shadow-[var(--shadow-hover)] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-orange-200 sm:px-6 sm:text-base"
                 >
                   Пробное занятие
                 </button>
@@ -136,15 +136,15 @@ export function HEADER() {
                         setMenuOpen((prev) => !prev);
                         setLocationOpen(false);
                       }}
-                      className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-base font-medium text-slate-800 transition hover:bg-slate-50 hover:text-primary focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/10"
+                      className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-medium text-slate-800 transition hover:bg-slate-50 hover:text-primary focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/10 sm:text-base"
                     >
                       <Menu className="size-5 text-primary" />
                       Меню
                     </button>
-                    <span className="h-7 w-px bg-slate-200" />
+                    <span className="h-6 w-px bg-slate-200" />
                     <Link
                       href="/login"
-                      className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-base font-medium text-slate-800 transition hover:bg-slate-50 hover:text-primary focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/10"
+                      className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-medium text-slate-800 transition hover:bg-slate-50 hover:text-primary focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary/10 sm:text-base"
                     >
                       <LogIn className="size-5 text-primary" />
                       Войти
@@ -158,7 +158,7 @@ export function HEADER() {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 10, scale: 0.98 }}
                         transition={{ duration: 0.18, ease: "easeOut" }}
-                        className="surface-card absolute right-0 top-[calc(100%+0.75rem)] w-64 p-3 backdrop-blur-xl"
+                        className="absolute right-0 top-[calc(100%+0.75rem)] w-64 rounded-[24px] border border-slate-200 bg-white p-3 shadow-[0_18px_36px_rgba(15,23,42,0.12)]"
                       >
                         <div className="mb-2 px-3 pt-1 text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">
                           Меню
