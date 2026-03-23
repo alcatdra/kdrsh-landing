@@ -1,0 +1,195 @@
+﻿{
+  "meta": {
+    "project": "Swimming School Landing",
+    "style": "modern, clean, premium, trustful, child-friendly but not childish",
+    "description": "Design system for a swimming school website focused on safety, trust, and child development"
+  },
+
+  "colors": {
+    "primary": {
+      "main": "#0EA5E9",
+      "dark": "#0369A1",
+      "light": "#7DD3FC",
+      "soft": "#E0F2FE"
+    },
+    "secondary": {
+      "main": "#14B8A6",
+      "light": "#99F6E4",
+      "soft": "#ECFEFF"
+    },
+    "accent": {
+      "main": "#F97316",
+      "hover": "#EA580C",
+      "soft": "#FFF7ED"
+    },
+    "neutral": {
+      "white": "#FFFFFF",
+      "background": "#F8FAFC",
+      "surface": "#FFFFFF",
+      "border": "#E2E8F0",
+      "text": {
+        "primary": "#0F172A",
+        "secondary": "#475569",
+        "muted": "#94A3B8"
+      }
+    },
+    "gradients": {
+      "hero": "linear-gradient(135deg, #E0F2FE 0%, #ECFEFF 100%)",
+      "accent": "linear-gradient(135deg, #0EA5E9 0%, #14B8A6 100%)",
+      "cta": "linear-gradient(135deg, #F97316 0%, #FB923C 100%)"
+    }
+  },
+
+  "typography": {
+    "fontFamily": {
+      "base": "'Inter', 'SF Pro Display', system-ui, sans-serif",
+      "heading": "'Inter', 'SF Pro Display', system-ui, sans-serif"
+    },
+    "fontSize": {
+      "xs": "12px",
+      "sm": "14px",
+      "base": "16px",
+      "lg": "18px",
+      "xl": "20px",
+      "2xl": "24px",
+      "3xl": "30px",
+      "4xl": "36px",
+      "5xl": "48px"
+    },
+    "lineHeight": {
+      "tight": "1.2",
+      "normal": "1.5",
+      "relaxed": "1.7"
+    },
+    "fontWeight": {
+      "regular": 400,
+      "medium": 500,
+      "semibold": 600,
+      "bold": 700
+    }
+  },
+
+  "spacing": {
+    "xs": "4px",
+    "sm": "8px",
+    "md": "16px",
+    "lg": "24px",
+    "xl": "32px",
+    "2xl": "48px",
+    "3xl": "64px",
+    "4xl": "88px"
+  },
+
+  "radius": {
+    "sm": "8px",
+    "md": "16px",
+    "lg": "24px",
+    "xl": "32px",
+    "full": "9999px"
+  },
+
+  "shadows": {
+    "soft": "0 4px 20px rgba(0,0,0,0.05)",
+    "card": "0 8px 30px rgba(0,0,0,0.06)",
+    "hover": "0 12px 40px rgba(0,0,0,0.1)"
+  },
+
+  "layout": {
+    "container": {
+      "mobile": "100%",
+      "tablet": "720px",
+      "desktop": "1140px",
+      "wide": "1280px"
+    },
+    "grid": {
+      "columns": 12,
+      "gap": "24px"
+    }
+  },
+
+  "breakpoints": {
+    "mobile": "0px",
+    "tablet": "768px",
+    "desktop": "1024px",
+    "wide": "1280px"
+  },
+
+  "components": {
+    "button": {
+      "primary": {
+        "background": "gradient.cta",
+        "color": "#FFFFFF",
+        "padding": "16px 24px",
+        "radius": "md",
+        "shadow": "card"
+      },
+      "secondary": {
+        "background": "#FFFFFF",
+        "border": "1px solid #E2E8F0",
+        "color": "#0F172A"
+      }
+    },
+
+    "card": {
+      "background": "#FFFFFF",
+      "padding": "24px",
+      "radius": "lg",
+      "shadow": "card",
+      "border": "1px solid #E2E8F0"
+    },
+
+    "input": {
+      "background": "#FFFFFF",
+      "border": "1px solid #E2E8F0",
+      "padding": "12px 16px",
+      "radius": "md"
+    },
+
+    "section": {
+      "paddingY": {
+        "mobile": "48px",
+        "desktop": "88px"
+      }
+    }
+  },
+
+  "animations": {
+    "fadeIn": {
+      "duration": "0.6s",
+      "ease": "ease-out",
+      "transform": "translateY(20px)"
+    },
+    "hoverLift": {
+      "duration": "0.3s",
+      "transform": "translateY(-4px)",
+      "shadow": "hover"
+    },
+    "buttonPress": {
+      "scale": "0.98",
+      "duration": "0.15s"
+    },
+    "heroMotion": {
+      "type": "subtle-floating",
+      "duration": "6s",
+      "loop": true
+    }
+  },
+
+  "uiPrinciples": {
+    "density": "low",
+    "spacing": "generous",
+    "visualStyle": "clean, airy, soft shadows",
+    "interaction": "smooth, non-aggressive",
+    "trustSignals": [
+      "soft colors",
+      "rounded corners",
+      "clear hierarchy",
+      "no clutter"
+    ]
+  },
+
+  "contentTone": {
+    "voice": "caring, confident, professional",
+    "focus": ["safety", "child development", "trust", "comfort for parents"]
+  }
+}
