@@ -2,7 +2,7 @@ name: Deploy Next.js site to Pages
 
 on:
   push:
-    branches: ["about-school"]
+    branches: ['master']
   workflow_dispatch:
 
 permissions:
@@ -11,7 +11,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: 'pages'
   cancel-in-progress: false
 
 jobs:
@@ -50,7 +50,7 @@ jobs:
 
       - name: Build with Next.js
         env:
-          GITHUB_ACTIONS: "true"
+          GITHUB_ACTIONS: 'true'
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: pnpm build
 
