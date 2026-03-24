@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 
 import { AnimatePresence, motion } from 'framer-motion';
-import { ArrowRight, ShieldCheck, X } from 'lucide-react';
+import { ArrowRight, X } from 'lucide-react';
 
 const heroQuestions = [
   'Вы хотите быть спокойны, когда ребёнок находится в бассейне?',
