@@ -5,6 +5,7 @@ import type { ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
+import logoImage from '../../../public/logo.png';
 
 import { AnimatePresence, motion } from 'framer-motion';
 import { ChevronDown, LogIn, MapPin, Menu, Tickets, X } from 'lucide-react';
@@ -62,7 +63,7 @@ export function HEADER() {
                 >
                   <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-[18px] bg-white shadow-[var(--shadow-card)] sm:h-14 sm:w-14">
                     <Image
-                      src="/logo.png"
+                      src={logoImage}
                       alt="KUDRYASHOV PRO LAB"
                       fill
                       className="object-contain p-2"

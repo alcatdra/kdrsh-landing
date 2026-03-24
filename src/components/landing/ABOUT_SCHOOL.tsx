@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import founderImage from '../../../public/images/founder.png';
 
 import { motion } from 'framer-motion';
 import { Trophy, Users, Waves } from 'lucide-react';
@@ -76,7 +77,7 @@ export function ABOUT_SCHOOL() {
             className="relative min-h-[560px] sm:min-h-[680px] lg:min-h-[760px]"
           >
             <Image
-              src="/images/founder.png"
+              src={founderImage}
               alt="Основатель школы"
               fill
               className="object-contain object-bottom"

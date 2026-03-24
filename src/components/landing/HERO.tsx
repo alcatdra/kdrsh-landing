@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { useState } from 'react';
+import heroImage from '../../../public/images/photo.png';
 
 import { AnimatePresence, motion } from 'framer-motion';
 import { ArrowRight, X } from 'lucide-react';
@@ -22,7 +23,7 @@ export function HERO() {
       <section className="section-padding relative isolate overflow-hidden">
         <div className="absolute inset-0 -z-20">
           <Image
-            src="/images/photo.png"
+            src={heroImage}
             alt="Ребёнок на тренировке по плаванию"
             fill
             className="object-cover"
