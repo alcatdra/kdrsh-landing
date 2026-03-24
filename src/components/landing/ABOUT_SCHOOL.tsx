@@ -73,13 +73,13 @@ export function ABOUT_SCHOOL() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
-            className="relative min-h-[560px] overflow-hidden rounded-[32px] bg-slate-100 sm:min-h-[680px] lg:min-h-[760px]"
+            className="relative min-h-[560px] sm:min-h-[680px] lg:min-h-[760px]"
           >
             <Image
               src="/images/founder.png"
               alt="Основатель школы"
               fill
-              className="object-cover object-top"
+              className="object-contain object-bottom"
               sizes="(max-width: 1024px) 100vw, 48vw"
             />
           </motion.div>
